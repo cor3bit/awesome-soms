@@ -1,4 +1,4 @@
-# Awesome SOM for ML [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# Awesome Second-Order Methods [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 A curated list of resources for second-order 
 stochastic optimization 
@@ -38,6 +38,23 @@ by Raghu Bollapragada, Richard H Byrd, Jorge Nocedal, 2018.
 
 
 
+### Analysis of the Hessian
+
+- [Empirical Analysis of the Hessian of Over-Parametrized Neural Networks](https://arxiv.org/abs/1706.04454)
+by Levent Sagun, Utku Evci, V. Ugur Guney, Yann Dauphin, Leon Bottou, 2017.
+
+- [The Full Spectrum of Deepnet Hessians at Scale: Dynamics with SGD Training and Sample Size](https://arxiv.org/abs/1811.07062)
+by Vardan Papyan, 2018.
+
+- [PyHessian: Neural Networks Through the Lens of the Hessian](https://arxiv.org/abs/1912.07145)
+by Zhewei Yao, Amir Gholami, Kurt Keutzer, Michael W. Mahoney, 2019.
+
+- [A Deeper Look at the Hessian Eigenspectrum of Deep Neural Networks and its Applications to Regularization](https://arxiv.org/abs/2012.03801)
+by Adepu Ravi Sankar, Yash Khasbage, Rahul Vigneswaran, Vineeth N Balasubramanian, 2020.
+
+
+
+
 ### Diagonal Scaling
 
 - [AdaHessian: An Adaptive Second Order Optimizer for Machine Learning](https://arxiv.org/abs/2006.00719) 
@@ -58,6 +75,7 @@ by Ryan Kiros, 2013. Algorithm: SHF
 
 
 
+
 ### Quasi-Newton
 
 - [A Stochastic Quasi-Newton Method for Large-Scale Optimization](https://arxiv.org/abs/1401.7020) 
@@ -66,8 +84,11 @@ by R.H. Byrd, S.L. Hansen, J. Nocedal, Y. Singer, 2014.
 - [A Multi-Batch L-BFGS Method for Machine Learning](https://arxiv.org/abs/1605.06049) 
 by Albert S. Berahas, Jorge Nocedal, Martin Takáč, 2016. 
 
+- [Stochastic Quasi-Newton with Line-Search Regularization](https://arxiv.org/abs/1909.01238) by Adrian Wills, Thomas Schön, 2019. Algorithm: SQN
+
 - [Practical Quasi-Newton Methods for Training Deep Neural Networks](https://arxiv.org/abs/2006.08877) 
 by Donald Goldfarb, Yi Ren, Achraf Bahamou, 2020.
+
 
 
 
@@ -92,6 +113,8 @@ by Omead Pooladzandi and Yiming Zhou, 2022. Algorithm: LM
 - [Rethinking Gauss-Newton for learning over-parameterized models](https://arxiv.org/abs/2302.02904) 
 by Michael Arbel et al., 2023.
 
+- [Exact Gauss-Newton Optimization for Training Deep Neural Networks](https://arxiv.org/abs/2405.14402) by Mikalai Korbit, Adeyemi D. Adeoye, Alberto Bemporad, Mario Zanon, 2024. Algorithm: EGN
+
 
 
 
@@ -100,6 +123,9 @@ by Michael Arbel et al., 2023.
 - [Optimizing Neural Networks with Kronecker-factored Approximate Curvature](https://arxiv.org/abs/1503.05671) 
 by James Martens and Roger Grosse, 2015. Algorithm: K-FAC
 
+
+
+
 ### Other
 
 - [Second-order optimization with lazy Hessians](https://arxiv.org/abs/2212.00781) 
@@ -107,14 +133,15 @@ by Nikita Doikov, El Mahdi Chayti, Martin Jaggi, 2022.
 
 
 
+
 ## Implementation in JAX
 
 - [Optax](https://github.com/google-deepmind/optax) - mostly first-order accelerated methods
 
-- [JAXopt](https://github.com/google/jaxopt) - deterministic second-order methods (e.g., 
-Gauss-Newton, Levenberg Marquardt), stochastic first-order methods PolyakSGD, ArmijoSGD
+- [Somax](https://github.com/cor3bit/somax) - second-order stochastic solvers
+
+- [JAXopt](https://github.com/google/jaxopt) - deterministic second-order methods (e.g., Gauss-Newton, Levenberg Marquardt), stochastic first-order methods PolyakSGD, ArmijoSGD
 
 - [KFAC-JAX](https://github.com/google-deepmind/kfac-jax) - implementation of KFAC from the DeepMind team
 
-- [AdaHessian](https://github.com/nestordemeure/AdaHessianJax) - implementation of the AdaHessian optimizer
-
+- [AdaHessianJax](https://github.com/nestordemeure/AdaHessianJax) - implementation of the AdaHessian optimizer by Nestor Demeure
